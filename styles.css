@@ -66,11 +66,35 @@ button:hover {
 ul {
   list-style-type: none;
   padding: 0;
+  margin-bottom: 10px;
 }
 
 li {
+  display: flex;
+  align-items: center;
   padding: 10px;
   margin-bottom: 5px;
   background-color: #eaeaea;
   border-radius: 4px;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#todoInput {
+  flex: 1;
+  margin-right: 10px;
 }
