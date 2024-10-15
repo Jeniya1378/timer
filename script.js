@@ -56,9 +56,25 @@ document.getElementById('addButton').addEventListener('click', function() {
   let task = document.getElementById('todoInput').value;
   if (task) {
     let listItem = document.createElement('li');
-    listItem.textContent = task;
+
+    // Create checkbox for task completion
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        listItem.classList.add('completed');
+      } else {
+        listItem.classList.remove('completed');
+      }
+    });
+
+    // Append the checkbox and the task text
+    listItem.appendChild(checkbox);
+    listItem.appendChild(document.createTextNode(task));
     document.getElementById('todoList').appendChild(listItem);
-    document.getElementById('todoInput').value = '';  // Clear the input field after adding
+
+    // Clear the input field after adding
+    document.getElementById('todoInput').value = '';
   } else {
     alert('Please enter a task.');
   }
