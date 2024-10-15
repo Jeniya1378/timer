@@ -2,14 +2,12 @@ let interval;
 let timeInSeconds;
 let isPaused = false;
 
-// Start Button functionality
+// Timer functionality
 document.getElementById('startButton').addEventListener('click', function() {
   if (isPaused) {
-    // If the timer is paused, just resume it
     isPaused = false;
     startTimer();
   } else {
-    // If the timer is not paused, start with a new time
     let minutes = parseInt(document.getElementById('minutes').value);
     if (isNaN(minutes) || minutes <= 0) {
       alert('Please enter a valid number of minutes.');
@@ -20,7 +18,6 @@ document.getElementById('startButton').addEventListener('click', function() {
   }
 });
 
-// Pause Button functionality
 document.getElementById('pauseButton').addEventListener('click', function() {
   if (interval) {
     clearInterval(interval);
@@ -28,7 +25,6 @@ document.getElementById('pauseButton').addEventListener('click', function() {
   }
 });
 
-// Reset Button functionality
 document.getElementById('resetButton').addEventListener('click', function() {
   clearInterval(interval);
   timeInSeconds = 0;
@@ -38,7 +34,6 @@ document.getElementById('resetButton').addEventListener('click', function() {
 });
 
 function startTimer() {
-  // Clear any existing intervals to prevent multiple timers running
   clearInterval(interval);
   
   interval = setInterval(function() {
@@ -55,3 +50,16 @@ function startTimer() {
     }
   }, 1000);
 }
+
+// To-Do List functionality
+document.getElementById('addButton').addEventListener('click', function() {
+  let task = document.getElementById('todoInput').value;
+  if (task) {
+    let listItem = document.createElement('li');
+    listItem.textContent = task;
+    document.getElementById('todoList').appendChild(listItem);
+    document.getElementById('todoInput').value = '';  // Clear the input field after adding
+  } else {
+    alert('Please enter a task.');
+  }
+});
