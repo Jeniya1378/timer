@@ -82,7 +82,16 @@ li input[type="checkbox"] {
   margin-right: 10px;
 }
 
-li.completed {
+li span {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+}
+
+li.completed span {
   text-decoration: line-through;
   color: #777;
 }
