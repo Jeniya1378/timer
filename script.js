@@ -68,9 +68,13 @@ document.getElementById('addButton').addEventListener('click', function() {
       }
     });
 
-    // Append the checkbox and the task text
+    // Create task label (rectangular block)
+    let taskLabel = document.createElement('span');
+    taskLabel.textContent = task;
+
+    // Append the checkbox and task label
     listItem.appendChild(checkbox);
-    listItem.appendChild(document.createTextNode(task));
+    listItem.appendChild(taskLabel);
     document.getElementById('todoList').appendChild(listItem);
 
     // Clear the input field after adding
