@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Countdown Timer</title>
+  <title>Countdown Timer with To-Do List</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Countdown Timer</h1>
-    <input type="number" id="minutes" placeholder="Enter minutes">
-    <button id="startButton">Start</button>
-    <button id="pauseButton">Pause</button>
-    <button id="resetButton">Reset</button>
-    <p id="timerDisplay">00:00</p>
+    <div class="timer-container">
+      <h1>Countdown Timer</h1>
+      <input type="number" id="minutes" placeholder="Enter minutes">
+      <button id="startButton">Start</button>
+      <button id="pauseButton">Pause</button>
+      <button id="resetButton">Reset</button>
+      <p id="timerDisplay">00:00</p>
+    </div>
+    <div class="todo-container">
+      <h2>To-Do List</h2>
+      <input type="text" id="todoInput" placeholder="Enter a task">
+      <button id="addButton">Add</button>
+      <ul id="todoList"></ul>
+    </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
