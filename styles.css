@@ -9,14 +9,29 @@ body {
 }
 
 .container {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
   background-color: #ffffff;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.timer-container {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.todo-container {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
   color: #333;
 }
 
@@ -24,7 +39,7 @@ input {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 10px;
-  width: 100px;
+  width: 100%;
 }
 
 button {
@@ -35,7 +50,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin: 5px;
+  margin: 5px 0;
 }
 
 button:hover {
@@ -46,4 +61,16 @@ button:hover {
   font-size: 48px;
   color: #333;
   margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #eaeaea;
+  border-radius: 4px;
 }
